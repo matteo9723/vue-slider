@@ -1,3 +1,27 @@
 *{
-  color: red;
+  margin: 0;
+  padding: 0;
+ box-sizing: border-box;
+}
+
+.container{
+  height: 100vh;
+}
+
+img{
+  height: 250px;
+  width: 500px;
+}
+
+i.fa-chevron-right{
+  transform: translateX(-90%);
+}
+
+i{
+  background-color: black;
+  border-radius: 50%;
+}
+
+i:hover{
+  background-color: blue;
 }
