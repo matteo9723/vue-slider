@@ -28,16 +28,16 @@
       <div class="row">
         <div class="col position-relative ">
 
-          <i @click="nextSlide" class="fas fa-chevron-right position-absolute top-50 end-0 p-2 text-white "></i>
-          <i @click="prevSlide" class="fas fa-chevron-left position-absolute top-50 mx-2 p-2 text-white "></i>
-          <img :src="images[counter]" alt="foto">
+          <i @click='nextSlide' class="fas fa-chevron-right position-absolute top-50 end-0 p-2 text-white "></i>
+          <i @click='prevSlide'class="fas fa-chevron-left position-absolute top-50 mx-2 p-2 text-white "></i>
+          <img @mouseleave='autoscroll' @mouseover='stop'  :src="images[counter]" alt="foto">
          
         </div>
       </div>
     </div>
   </div>
 
-<!-- collegamento a mio Vue  --> 
+<!-- collegamento a Vue  --> 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <!-- collegamento a mio js  -->  
   <script src="script.js"></script>

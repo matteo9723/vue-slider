@@ -3,10 +3,16 @@ const app = new Vue ({
 
   data: {
   images:['img/01.jpg','img/02.jpg','img/03.jpg','img/04.jpg','img/05.jpg'],
-  counter : 0
+  counter : 0,
+  clock:null
+
   },
 
-  mounted(){},
+  mounted(){
+
+   this.autoscroll();
+
+  },
 
   methods:{
 
@@ -26,8 +32,23 @@ const app = new Vue ({
         this.counter=this.images.length-1;
       }
 
+    },
+
+    autoscroll(){ 
+
+      this.clock=setInterval(()=>{
+      this.nextSlide();
+      },2000)
+
+    },
+
+    stop(){
+
+      clearInterval(this.clock);
+
     }
 
+   
   }
 
 });
